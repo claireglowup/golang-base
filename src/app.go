@@ -40,10 +40,12 @@ func (s *server) Start() {
 	repo := repository.NewStore(s.db)
 	usecase := usecase.NewUsecase(repo)
 	delivery := delivery.NewDelivery(usecase)
+
 	log.Println("pake delivery bro", delivery)
+
 	s.httpServer.GET("/", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, gin.H{
-			"message": "ea",
+			"message": "test",
 		})
 	})
 
