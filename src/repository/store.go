@@ -6,6 +6,7 @@ import (
 	"fmt"
 )
 
+// need sqlc for fix
 type Store interface {
 	Querier
 }
